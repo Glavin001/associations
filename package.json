@@ -1,0 +1,44 @@
+{
+  "name": "feathers-associations",
+  "description": "Associations for Feathers services.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/feathersjs/associations",
+  "author": {
+    "name": "David Luecke",
+    "email": "daff@neyeon.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/feathersjs/associations.git"
+  },
+  "bugs": {
+    "url": "https://github.com/feathersjs/associations/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/feathersjs/associations/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/associations",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-cli": "~0.1.7",
+    "grunt": "~0.4.1",
+    "grunt-release": "~0.5.1",
+    "grunt-contrib-jshint": "~0.x",
+    "grunt-simple-mocha": "~0.4.0"
+  },
+  "peerDependencies": {
+    "feathers": "~0.3.0"
+  },
+  "keywords": [
+    "feathers-plugin",
+    "feathers"
+  ]
+}
