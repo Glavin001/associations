@@ -14,11 +14,11 @@ var app = feathers().configure(associations())
       callback(null, [{
         id: 0,
         type: 'post',
-        user: params.userId
+        user: params.query.userId
       }, {
         id: 1,
         type: 'post',
-        user: params.userId
+        user: params.query.userId
       }]);
     }
   })
