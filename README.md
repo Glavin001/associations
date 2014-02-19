@@ -1,10 +1,10 @@
 # feathers-associations [![Build Status](https://secure.travis-ci.org/feathersjs/associations.png?branch=master)](http://travis-ci.org/feathersjs/associations)
 
-Associations for Feathers services.
+> Associations for Feathers services.
 
 ## Getting Started
 
-Install the module with: `npm install feathers-associations`
+Install the module with: `npm install feathers-associations --save`
 
 ```js
 var feathers = require('feathers');
@@ -44,7 +44,7 @@ socket.emit('/users/:userId/posts', { userId: 123 }, function(error, posts) {
 
 
 ## Examples
-_(Coming soon)_
+See [examples directory](https://github.com/feathersjs/associations/tree/master/examples).
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
@@ -53,5 +53,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 _(Nothing yet)_
 
 ## License
-Copyright (c) 2014 David Luecke  
-Licensed under the MIT license.
+Copyright (c) 2014 [David Luecke](https://github.com/daffl)
+Licensed under the [MIT license](https://github.com/feathersjs/associations/blob/master/LICENSE-MIT).
