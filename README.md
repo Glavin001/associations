@@ -3,15 +3,45 @@
 Associations for Feathers services.
 
 ## Getting Started
+
 Install the module with: `npm install feathers-associations`
 
-```javascript
-var feathers_associations = require('feathers-associations');
-feathers_associations.awesome(); // "awesome"
+```js
+var feathers = require('feathers');
+var associations = require('feathers-associations');
+
+var app = feathers().configure(associations)
+  .use('/users', userService)
+  .use('/posts', postsService)
+  .associate('/users/:userId/posts', ['posts']);
 ```
 
 ## Documentation
-_(Coming soon)_
+
+__Definition and use with REST URIs:__
+
+```js
+// Both associations should only work if there is a /users service registered already
+app.use('/users', userService)
+  .use('/posts', postsService)
+  .use('/accounts', accountService);
+
+// Pass service name in an array
+// Calls postsService.findAll({ userId: <userId> })
+app.associate('/users/:userId/posts', ['posts']);
+
+// Calls userService.get(<userId>) then calls
+// accountService.get(user.account)
+app.associate('/users/:userId/account', 'accounts');
+```
+
+__For SocketIO:__
+
+```js
+socket.emit('/users/:userId/posts', { userId: 123 }, function(error, posts) {
+});
+```
+
 
 ## Examples
 _(Coming soon)_

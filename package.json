@@ -25,20 +25,25 @@
     "node": ">= 0.10.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt"
   },
   "devDependencies": {
     "grunt-cli": "~0.1.7",
     "grunt": "~0.4.1",
     "grunt-release": "~0.5.1",
     "grunt-contrib-jshint": "~0.x",
-    "grunt-simple-mocha": "~0.4.0"
+    "grunt-simple-mocha": "~0.4.0",
+    "feathers": ">= 0.3.1"
   },
   "peerDependencies": {
-    "feathers": "~0.3.0"
+    "feathers": ">= 0.3.1"
   },
   "keywords": [
     "feathers-plugin",
     "feathers"
-  ]
+  ],
+  "dependencies": {
+    "uberproto": "~1.1.1",
+    "lodash": "~2.4.1"
+  }
 }

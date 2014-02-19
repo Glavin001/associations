@@ -1,0 +1,27 @@
+var feathers = require('feathers');
+var associations = require('./lib/associations');
+var app = feathers().configure(associations())
+  .use('/users', {
+    find: function(params, callback) {
+      callback(null, [{
+        id: 0,
+        name: 'testuser'
+      }]);
+    }
+  })
+  .use('/posts', {
+    find: function(params, callback) {
+      callback(null, [{
+        id: 0,
+        type: 'post',
+        user: params.userId
+      }, {
+        id: 1,
+        type: 'post',
+        user: params.userId
+      }]);
+    }
+  })
+  .associate('/users/:userId/posts', ['posts']);
+
+app.listen(8080);
